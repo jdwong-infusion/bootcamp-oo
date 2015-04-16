@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace bootcamp_oo
 {
@@ -10,8 +6,18 @@ namespace bootcamp_oo
     {
         static void Main(string[] args)
         {
+            var adorableList = new AdorableList<AdorableAnimal>();
+            Puppy rover = new Puppy("Rover");
+            adorableList.Add(rover);
+
+            Console.WriteLine(adorableList.ToString());
+
+            adorableList.PlayAll();
+
+            Console.WriteLine(adorableList.ToString());
+
             Console.WriteLine("Press Enter to exit...");
-            Console.ReadLine(); // waits for line of input
+            Console.ReadLine(); // waits for line of input before closing
         }
     }
 }
